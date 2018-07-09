@@ -5,5 +5,6 @@ module.exports = {
       port: 7545,
       network_id: 5777 // Match any network id
     }
-  }
+  },
+  migrations_directory: "./migrations"
 };
