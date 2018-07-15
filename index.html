@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>rock–paper–scissors</title>
+  <style>
+    html, body {
+      font-size: 24px;
+    }
+    input[type=text] {
+      line-height: 30px;
+      width: 200px;
+    }
+
+    .figure-box {
+      cursor: pointer;
+    }
+    .figure-icon {
+      font-size: 48px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+    }
+    .grid-cell {
+      outline: 1px dotted;
+      padding: 20px;
+    }
+    .contract-address {
+      font-size: 18px;
+    }
+    .btn {
+      font-size: 18px;
+      background: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      border: 1px solid red;
+    }
+    .btn:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+    <div class="grid">
+      <div class="grid-cell">
+        <p>
+          <label class="figure-box">
+            <span class="figure-icon">🗿</span>
+            <input class="figure-input" value="rock" name="figure" type="radio" checked>
+            Rock
+          </label>
+        </p>
+        <p>
+          <label class="figure-box">
+            <span class="figure-icon">📄</span>
+            <input class="figure-input" value="paper" name="figure" type="radio">
+            Paper
+          </label>
+        </p>
+        <p>
+          <label class="figure-box">
+            <span class="figure-icon">✂️</span>
+            <input class="figure-input" value="scissors" name="figure" type="radio">
+            Scissors
+          </label>
+        </p>
+      </div>
+      <div class="grid-cell">
+        <p>
+          Game ends in: <span id="game-duration">0</span> min(s)
+        </p>
+        <p>
+          Contract address:
+          <a href="#" class="contract-address" id="contract-address"></a>
+        </p>
+        <p>
+          Players in game: <span id="players-counter">0</span>
+        </p>
+
+        <p>
+          Game bank: <span id="game-bank">0</span> ether
+        </p>
+        <p>
+          <span id="select-box"></span>
+        </p>
+
+        <p>
+          <input id="price" class="price" type="number" min="0.5" step="0.1" placeholder="value" value="0.5">
+        </p>
+
+        <button id="submit-btn" class="btn">Join to Game</button>
+        <button id="finish-btn" class="btn">Finish Game</button>
+
+      </div>
+    </div>
+</body>
+</html>
